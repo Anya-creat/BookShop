@@ -32,4 +32,14 @@ export interface IBooksState {
   selectedBook: IBookDetails | null;
   loading: boolean;
   error: string | null;
+  favorites: string[];
+  cart: ICartItem[];
+}
+
+export interface ICartItem {
+  isbn13: string;
+  title: string;
+  price: string;
+  image: string;
+  quantity: number;
 }
