@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import booksReducer from './features/books/bookSlice'
+import profileReducer from './signin/profileSlice'
 
 export const store = configureStore({
   reducer: {
     books: booksReducer,
+    profile: profileReducer
   },
 });
 
