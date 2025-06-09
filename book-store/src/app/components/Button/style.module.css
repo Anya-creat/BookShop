@@ -1,0 +1,11 @@
+.bigButton{
+    border: none;
+    background: rgb(66, 113, 200);
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #FFFFFF;
+    cursor: pointer;
+}

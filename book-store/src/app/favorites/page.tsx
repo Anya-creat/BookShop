@@ -2,7 +2,7 @@
 
 import { useAppDispatch, useAppSelector } from "@/app/hooks"
 import { RootState } from "@/app/store";
-import { toggleFavorite } from "../books/bookSlice";
+import { toggleFavorite } from "../features/books/bookSlice";
 import styles from "./styles.module.css"
 import { BackArrow, FavoriteIcon } from "@/app/svg/svg";
 

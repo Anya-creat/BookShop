@@ -1,0 +1,51 @@
+.success{
+    padding: 50px 0 200px; 
+    background: #f5f7fa;
+}
+.success_container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+.success_back{
+    font-size: 16px;
+    line-height: 20px;
+    color: #747474;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.success_title{
+    font-size: 36px;
+    line-height: 40px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 100px;
+}
+.success_message{
+    margin: 0 auto;
+    background: #f5f7fa;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #c7c7c7;
+    width: 400px;
+}
+.success_message_desk{
+    margin-bottom: 40px;
+}
+.success__text{
+    font-size: 14px;
+    line-height: 18px;
+    color: #747474;
+    font-weight: 400;
+}
+.success_btn{
+    border: none;
+    background: rgb(66, 113, 200);
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #FFFFFF;
+    cursor: pointer;
+}

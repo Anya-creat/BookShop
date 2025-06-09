@@ -4,7 +4,7 @@ import { BackArrow } from "@/app/svg/svg"
 import styles from "./styles.module.css"
 import { useAppDispatch, useAppSelector } from "@/app/hooks"
 import { RootState } from "@/app/store"
-import { removeFromCart, updateCartQuantity } from "../books/bookSlice";
+import { removeFromCart, updateCartQuantity } from "../features/books/bookSlice";
 
 
 const CartPage: React.FC = () => {
