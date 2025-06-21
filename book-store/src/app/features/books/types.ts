@@ -34,6 +34,11 @@ export interface IBooksState {
   error: string | null;
   favorites: string[];
   cart: ICartItem[];
+  searchResults: IBook[];
+  searchQuery: string;
+  isSearching: boolean;
+  relatedBooks: IBook[];
+  isLoadingRelated: boolean;
 }
 
 export interface ICartItem {

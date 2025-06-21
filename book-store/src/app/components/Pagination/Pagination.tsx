@@ -1,3 +1,4 @@
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import styles from "./styles.module.css"
 
 interface PaginationProps {
@@ -20,6 +21,7 @@ export const Pagination: React.FC<PaginationProps> = ({
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
       >
+        <ArrowLeft />
       </button>
 
       <div className={styles.pages}>
@@ -39,6 +41,7 @@ export const Pagination: React.FC<PaginationProps> = ({
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
       >
+        <ArrowRight />
       </button>
     </div>
   );

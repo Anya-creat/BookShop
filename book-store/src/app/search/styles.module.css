@@ -1,0 +1,117 @@
+/*контейнер поиска*/
+.search_container {
+  position: relative;
+  width: 100%;
+  max-width: 542px;
+}
+/*поле ввода*/
+.search_input_wrapper {
+  position: relative;
+}
+.search_icon {
+  position: absolute;
+  right: 16px;
+  top: 19px;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 24px;
+  color: rgba(49, 48, 55, 1);
+  pointer-events: none;
+}
+.search_input {
+  width: 100%;
+  padding: 10px 20px 10px;
+  border: 1px solid rgba(231, 231, 231, 1);
+  background-color: rgba(247, 247, 247, 1);
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 400;
+}
+.search_input::placeholder {
+  color: rgba(231, 231, 231, 1);
+  outline: none;
+}
+.search_input:focus {
+  outline: none;
+}
+/*выпадающий список*/
+.search_results {
+  position: absolute;
+  z-index: 50;
+  width: 100%;
+  margin-top: 8px;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(231, 231, 231, 1);
+  max-height: 557px;
+  overflow-y: auto;
+}
+/*состояние загрузки*/
+.search_loading {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+.search_loading_spinner {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+  border: 2px solid transparent;
+  border-bottom-color: #3b82f6;
+  margin-right: 0.5rem;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*элемент результата*/
+.search_result_item {
+  display: block;
+  padding: 20px;
+  border-bottom: 1px solid rgba(231, 231, 231, 1);
+  text-decoration: none;
+}
+.search_result_item:hover {
+  background-color: #f9fafb;
+}
+.search_result_content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.search_image_wrapper {
+  position: relative;
+  background: rgba(244, 238, 253, 1);
+  padding: 0 14.32px;
+}
+.search_result_image {
+  width: 51.36px;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.search_result_info {
+  flex: 1;
+}
+.search_result_title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 32px;
+  font-weight: 400;
+  color: rgba(49, 48, 55, 1);
+
+  /* white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0.25rem; */
+}
+.search_no_results {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.875rem;
+}

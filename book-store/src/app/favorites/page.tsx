@@ -5,26 +5,41 @@ import { RootState } from "@/app/store";
 import { toggleFavorite } from "../features/books/bookSlice";
 import styles from "./styles.module.css"
 import { BackArrow, FavoriteIcon } from "@/app/svg/svg";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 
-interface IFavoritePage {
-    onBack: () => void
-}
 
-const FavoritePage: React.FC<IFavoritePage> = ({ onBack }) => {
+const FavoritePage: React.FC = () => {
     const dispatch = useAppDispatch();
     const { books, favorites } = useAppSelector((state: RootState) => state.books)
+    const router = useRouter()
 
+    const { email } = useAppSelector((state: RootState) => state.profile)
+
+    useEffect(() => {
+        if (!email) {
+            router.push('/signin');
+        }
+    }, [email, router]);
+
+    if (!email) {
+        return null;
+    }
     const favoriteBooks = books.filter(book => favorites.includes(book.isbn13))
 
     const handleRemoveFromFavorites = (isbn13: string) => {
-        dispatch(toggleFavorite(isbn13))
+        dispatch(toggleFavorite({
+            isbn13,
+            userId: email || undefined
+        }))
     }
 
     return (
         <div className={styles.favorites}>
             <div className={styles.favorites_header}>
-                <a className={styles.favorites_back_button} href="/"><BackArrow /></a>
+                <Link className={styles.favorites_back_button} href="/"><BackArrow /></Link>
                 <h1 className={styles.favorites_title}>Favorites</h1>
             </div>
 
@@ -48,7 +63,7 @@ const FavoritePage: React.FC<IFavoritePage> = ({ onBack }) => {
 
                             <button className={styles.favorite_button_heart}
                                 onClick={() => handleRemoveFromFavorites(book.isbn13)}>
-                                <FavoriteIcon/>
+                                <FavoriteIcon />
                             </button>
                         </div>
                     ))

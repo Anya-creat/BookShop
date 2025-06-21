@@ -1,4 +1,4 @@
-.favorites{
+.favorites {
   max-width: 1200px;
   width: 100%;
   margin: 161px auto 72px;
@@ -13,33 +13,35 @@
   cursor: pointer;
 }
 
-.favorites_title{
+.favorites_title {
+  font-family: "Bebas Neue", sans-serif;
   font-size: 56px;
   line-height: 64px;
   color: rgb(49, 48, 55);
   font-weight: 700;
   text-transform: uppercase;
-    text-transform: uppercase;
-    margin: 32px 0 48px;
+  margin-bottom: 48px;
+  text-transform: uppercase;
+  margin-top: 32px;
 }
-.favorites_container{
-    margin: 0 auto;
-    padding: 0 15px;
+.favorites_container {
+  margin: 0 auto;
 }
-.favorites_empty{
-    text-align: center;
+.favorites_empty {
+  text-align: center;
   padding: 4rem 2rem;
   color: #666;
   font-size: 1.2rem;
 }
-.favorite_item{
-    margin-bottom: 48px;
-    display: flex;
-    gap: 32px;
-    justify-content: space-between;
+.favorite_item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(231, 231, 231, 1);
 }
-.favorite_img_wrapper{
-width: 256px;
+.favorite_img_wrapper {
+  width: 256px;
   height: 192px;
   background: #f1e8e0;
   display: flex;
@@ -54,40 +56,35 @@ width: 256px;
   object-fit: contain;
 }
 
-.favorite_nfo{
-    padding: 36px 0;
-    text-align: left;
-    flex: 1;
-
+.favorite_nfo {
+  flex: 1;
+  padding: 0 16px;
+  margin-right: 120px;
 }
-.favorite_bookTitle{
-font-size: 24px;
-  align-items: 32px;
-  font-weight: 700;
+.favorite_bookTitle {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
   text-transform: uppercase;
   color: rgba(49, 48, 55, 1);
   margin-bottom: 8px;
 }
-.favorite_author{
-font-size: 16px;
+.favorite_author {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
   align-items: 24px;
   font-weight: 400;
   color: rgba(168, 168, 168, 1);
   margin-bottom: 24px;
 }
-.favorite_price{
-font-size: 24px;
+.favorite_price {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 24px;
   align-items: 32px;
   font-weight: 700;
   color: rgba(49, 48, 55, 1);
 }
 .favorite_button_heart {
-  color: black; /* иконка будет белая */
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.favorite_button_heart:hover {
-  color: red; /* иконка станет красной при наведении */
+  color: rgba(252, 133, 127, 1);
 }

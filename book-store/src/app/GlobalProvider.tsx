@@ -12,16 +12,16 @@ const PUBLIC_PAGES = [
 
 
 const GlobalProvider = ({ children }: { children: ReactNode }) => {
-    const email = useAppSelector(state => state.profile.email)
+    // const email = useAppSelector(state => state.profile.email)
     const dispath = useAppDispatch()
     useEffect(() => {
         dispath(getUser())
-    },[])
-    const path = usePathname()
+    }, [dispath])
+    // const path = usePathname()
 
-    if (!email && PUBLIC_PAGES.indexOf(path) === -1) {
-        return <SignIn />
-    }
+    // if (!email && PUBLIC_PAGES.indexOf(path) === -1) {
+    //     return <SignIn />
+    // }
     return (
         <>
             {children}

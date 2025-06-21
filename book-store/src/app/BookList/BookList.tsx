@@ -4,27 +4,23 @@
 
 import React, { useEffect, useState } from 'react';
 import styles from './styles.module.css';
-import SelectedPost from '../BookDetails/BookDetails';
-import { AppDispatch, RootState } from '@/app/store';
-import { fetchBookDetails, fetchBooks } from '@/app/features/books/bookThunks';
-import { setSelectedBook } from '@/app/features/books/bookSlice'; 
-import { PostCard } from '../BookCard/BookCard';
+import { RootState } from '@/app/store';
+import { fetchBooks } from '@/app/features/books/bookThunks';
 import { Pagination } from '@/app/components/Pagination/Pagination';
 import { useAppDispatch, useAppSelector } from '@/app/hooks';
+import { PostCard } from '../BookCard/BookCard';
+import Subscribe from '@/app/components/subscribe/Subscribe';
 
 export const BookList: React.FC = () => {
   const dispatch = useAppDispatch();
-  const { books, loading, error, selectedBook } = useAppSelector((state: RootState) => state.books);
+  const { books, loading, error } = useAppSelector((state: RootState) => state.books);
   const [currentPage, setCurrentPage] = useState(1);
   const booksPerPage = 9;
 
   useEffect(() => {
     dispatch(fetchBooks('mongodb'));
-  }, [dispatch]);
+  }, []);
 
-  const handleCardClick = async (isbn13: string) => {
-    await dispatch(fetchBookDetails(isbn13));
-  };
 
   if (loading) {
     return <div className={styles.loading}>Loading...</div>;
@@ -34,14 +30,6 @@ export const BookList: React.FC = () => {
     return <div className={styles.error}>{error}</div>;
   }
 
-  if (selectedBook) {
-    return (
-      <SelectedPost
-        book={selectedBook}
-        // onBack={() => dispatch(setSelectedBook(null))}
-      />
-    );
-  }
 
   const indexOfLastBook = currentPage * booksPerPage;
   const indexOfFirstBook = indexOfLastBook - booksPerPage;
@@ -56,7 +44,6 @@ export const BookList: React.FC = () => {
           <PostCard
             key={book.isbn13}
             book={book}
-            onClick={() => handleCardClick(book.isbn13)}
           />
         ))}
       </div>
@@ -65,6 +52,7 @@ export const BookList: React.FC = () => {
         totalPages={totalPages}
         onPageChange={setCurrentPage}
       />
+      <Subscribe />
     </section>
   );
 };
