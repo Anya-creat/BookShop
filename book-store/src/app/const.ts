@@ -4,3 +4,8 @@ export const LOGIN_PATH = '/auth/jwt/create/'
 export const ME_PATH = '/auth/users/me'
 export const USER_PATH = '/auth/users/'
 export const ACTIVATION_PATH = 'activation/'
+
+export const URL_API_BOOK = 'https://api.itbook.store/1.0'
+export const NEW_BOOK = '/new'
+export const ONE_BOOK = '/books'
+export const SEARCH_BOOK = '/search'

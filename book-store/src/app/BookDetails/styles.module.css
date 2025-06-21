@@ -13,6 +13,7 @@
   cursor: pointer;
 }
 .book_title {
+  font-family: "Bebas Neue", sans-serif;
   font-size: 56px;
   line-height: 64px;
   color: rgb(49, 48, 55);
@@ -37,7 +38,7 @@
 }
 .card_img {
   width: 300px;
-  height: auto;
+  height: 350px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -47,22 +48,30 @@
   right: 0px;
   width: 56px;
   height: 56px;
-  background: #898989;
   border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgba(49, 48, 55, 1);
+  fill: rgba(49, 48, 55, 1);
+  stroke: rgba(255, 255, 255, 1);
+}
+.favoriteActive{
+  fill: rgba(252, 133, 127, 1);
+  stroke: rgba(252, 133, 127, 1);
 }
 .card_info {
   padding: 5px 14px 0;
   max-width: 476px;
   width: 100%;
+  border-top: 1px solid rgba(231, 231, 231, 1);
 }
 .card_price_wrapper {
   margin-bottom: 24px;
 }
 .card_price {
+  font-family: "Bebas Neue", sans-serif;
   font-size: 40px;
   line-height: 60px;
   color: rgb(49, 48, 55);
@@ -70,19 +79,21 @@
   text-transform: uppercase;
 }
 .card_details {
-  margin-bottom: 59px;
+  margin-bottom: 16px;
 }
 .card_details_Row {
   display: flex;
   justify-content: space-between;
 }
 .card_details_Label {
+  font-family: "Moserrat", sans-serif;
   font-size: 16px;
   line-height: 32px;
   color: rgb(168, 168, 168);
   font-weight: 400;
 }
 .card_details_Value {
+  font-family: "Moserrat", sans-serif;
   font-size: 16px;
   line-height: 32px;
   color: rgb(49, 48, 55);
@@ -94,12 +105,13 @@
 }
 .card_moredetails {
   font-size: 16px;
-  line-height: 32px;
+  line-height: 24px;
   color: rgb(49, 48, 55);
   font-weight: 400;
   cursor: pointer;
 }
 .card_add_btn {
+  font-family: "Bebas Neue", sans-serif;
   font-size: 24px;
   line-height: 100%;
   color: rgb(255, 255, 255);
@@ -114,15 +126,13 @@
   cursor: pointer;
   margin-bottom: 8px;
 }
-.card_added_btn {
-  background: #28a745 !important;
-}
 .card_incart_btn {
   background: #6c757d !important;
 }
 .card_preview_btn {
+  font-family: "Moserrat", sans-serif;
   font-size: 16px;
-  line-height: 24%;
+  line-height: 24px;
   color: rgb(49, 48, 55);
   font-weight: 400;
   max-width: 448px;
@@ -136,7 +146,6 @@
 .tab {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
 }
 .tab_wrapper {
   display: flex;
@@ -171,4 +180,60 @@
   color: rgb(49, 48, 55);
   font-weight: 400;
   padding: 2rem;
-}/*# sourceMappingURL=styles.module.css.map */
+}
+.more_book_title{
+font-family: "Bebas Neue", sans-serif;
+  font-size: 40px;
+  line-height: 48px;
+  color: rgb(49, 48, 55);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 48px;
+}
+.more_book_wrapper{
+display: flex;
+gap: 32px;
+justify-content: space-between;
+}
+.more_booke_img{
+background: #f1e8e0;
+  padding: 1px 63px;
+  margin-bottom: 20px;
+}
+.more_booke_img img{
+width: 226px;
+  height: 264px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+
+.more_book_info{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+gap: 40px;
+}
+.more_book_title{
+font-family: "Bebas Neue", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  color: rgb(49, 48, 55);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.more_book_subtitle{
+font-family: "Moserrat", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(168, 168, 168, 1);
+  font-weight: 400;
+}
+.more_book_price span{
+font-family: "Bebas Neue", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  color: rgb(49, 48, 55);
+  font-weight: 700;
+  text-transform: uppercase;
+}

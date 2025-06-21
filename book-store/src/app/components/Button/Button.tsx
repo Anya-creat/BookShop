@@ -11,9 +11,6 @@ const BigButton = (props: ValueButtonType) => {
       className={style.bigButton}
       onClick={(e) => {
         props.onClick?.(e);
-        // if(props.onClick) {
-        //     props.onClick()
-        // }
       }}
     >
       {props.value}

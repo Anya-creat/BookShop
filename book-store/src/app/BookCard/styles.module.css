@@ -1,0 +1,60 @@
+.card {
+  background: white;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.image_container {
+  position: relative;
+  background: rgba(244, 238, 253, 1);
+  padding: 1px 63px;
+}
+
+.image {
+  width: 226px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.content {
+  padding: 5px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  color: rgb(49, 48, 55);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(168, 168, 168, 1);
+  font-weight: 400;
+}
+
+.price {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: rgba(49, 48, 55, 1);
+  line-height: 32px;
+}

@@ -1,0 +1,18 @@
+.footer{
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid rgba(231, 231, 231, 1);
+  max-width: 1200px;
+  width: 100%;
+  padding: 35px 15px;
+  margin: 0 auto;
+}
+.footer_text{
+    font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: rgba(168, 168, 168, 1);
+  font-size: 16px;
+  line-height: 24px;
+}
